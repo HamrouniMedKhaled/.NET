@@ -1,0 +1,33 @@
+﻿@model Domaine.message
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutBack.cshtml";
+}
+
+<h3>Message Details</h3>
+
+<div  class="col-md-6 widget_1_box2">
+    <div class="wid_blog-desc">
+        <div class="wid_blog-right">
+            <h2>Object : @Html.DisplayFor(model => model.messageType) </h2>
+            <p>
+                Conserning a @Html.DisplayFor(model => model.messageCible) :
+            </p>
+            <p class="list-unstyled list-inline">
+                @Html.DisplayFor(model => model.body)
+            </p>
+            <hr />
+           @Html.DisplayFor(model => model.dateEnvoi)
+        </div>
+
+
+
+
+        <div class="clearfix"> </div>
+    </div>
+    
+
+    @Html.ActionLink("Back to List", "GetAllMessage")
+  
+</div>

@@ -1,0 +1,38 @@
+﻿
+
+@{
+    ViewBag.Title = "CandidateFr";
+    Layout = "~/Views/Shared/_LayoutBack.cshtml";
+}
+<h2>ListResourceArchive</h2>
+<div class="panel-body no-padding">
+    <table class="table table-striped">
+        <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Mail</th>
+            <th>DateNaissance</th>
+            <th>Address</th>
+            <th>Skill</th>
+            <th>Resource Type</th>
+            
+        </tr>
+        @foreach (var r in ViewBag.res)
+        {
+
+            <tr>
+                <td>@r.nom</td>
+                <td>@r.prenom</td>
+                <td>@r.email</td>
+                <td>@r.dateNaissance</td>
+                <td>@r.adresse.rue @r.adresse.ville @r.adresse.pays @r.adresse.codePostal</td>
+                <td>@r.competance</td>
+                <td>@r.resourceType</td>
+            </tr>
+
+        }
+
+    </table>
+    </body>
+    </html>
+

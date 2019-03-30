@@ -1,0 +1,70 @@
+﻿@model IEnumerable<MVC.Models.RdvModelView>
+
+@{
+    ViewBag.Title = "AllRdv";
+    Layout = "~/Views/Shared/_LayoutBack.cshtml";
+}
+
+<h2>AllRdv</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ClientNom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.arch)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateInsert)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateRdv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.etat)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClientNom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.arch)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateInsert)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateRdv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.etat)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.rdId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.rdId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.rdId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutBack.cshtml";
+}
+<script src="~/Scripts/Chart/exporting.js"></script>
+<script src="~/Scripts/Chart/highcharts.js"></script>
+
+
+<h2>Summary</h2>
+@Html.ActionLink("Projects", "Projects");
+@Html.ActionLink("Candidates", "Candidates");
+@Html.ActionLink("Resources", "Resources");
+@Html.ActionLink("Clients", "Clients");
+
+<div id="container" style="min-width: 200px; height: 300px; max-width: 400px; margin: 0 auto"></div>
+
+
+
+<script>
+
+    Highcharts.chart('container', {
+
+        title: {
+            text: 'Project number increase through the years '
+        },
+
+        subtitle: {
+            text: 'Map Levio'
+        },
+
+        yAxis: {
+            title: {
+                text: 'Number of Projects'
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle'
+        },
+
+        plotOptions: {
+            series: {
+                label: {
+                    connectorAllowed: false
+                },
+                pointStart: 2014
+            }
+        },
+
+        series: [{
+            name: 'Installation',
+            data: @ViewBag.graph
+        }],
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+
+    });
+
+
+</script>

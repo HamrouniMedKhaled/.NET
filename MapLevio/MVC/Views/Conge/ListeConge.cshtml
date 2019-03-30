@@ -1,0 +1,66 @@
+﻿@model IEnumerable<MVC.Models.CongViewModels>
+
+@{
+    ViewBag.Title = "ListeConge";
+    Layout = "~/Views/Shared/_LayoutBack.cshtml";
+
+}
+
+<h2>ListeConge</h2>
+
+
+<div class="panel-body no-padding">
+    <table class="table table-striped">
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.congeDebut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.congeFin)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.accepter)
+            </th>
+            <th>
+                Accept
+            </th>
+            <th>
+                Delete
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.congeDebut)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.congeFin)
+                </td>
+                @if (item.accepter == false)
+                {
+                    <td>
+                        False
+                    </td>}
+                @if (item.accepter == true)
+                {
+                    <td>
+                        True
+                    </td>}
+
+                <td>
+                    @Html.ActionLink("Accept", "Accept", new { id = item.idConge })
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.idConge })
+                </td>
+
+            </tr>
+        }
+
+    </table>
+    </div>

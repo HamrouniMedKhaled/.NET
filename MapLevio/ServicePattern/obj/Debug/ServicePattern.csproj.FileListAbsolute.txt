@@ -1,0 +1,36 @@
+C:\Users\yosra\Desktop\yosra\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\ServicePattern.dll.config
+C:\Users\yosra\Desktop\yosra\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\ServicePattern.dll
+C:\Users\yosra\Desktop\yosra\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\ServicePattern.pdb
+C:\Users\yosra\Desktop\yosra\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\Data.dll
+C:\Users\yosra\Desktop\yosra\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\EntityFramework.dll
+C:\Users\yosra\Desktop\yosra\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\yosra\Desktop\yosra\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\Domaine.dll
+C:\Users\yosra\Desktop\yosra\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\yosra\Desktop\yosra\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\MySql.Data.dll
+C:\Users\yosra\Desktop\yosra\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\Data.pdb
+C:\Users\yosra\Desktop\yosra\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\EntityFramework.xml
+C:\Users\yosra\Desktop\yosra\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\yosra\Desktop\yosra\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\Domaine.pdb
+C:\Users\yosra\Desktop\yosra\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\yosra\Desktop\yosra\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\yosra\Desktop\yosra\VF\GL4E\DotNet\MapLevio\ServicePattern\obj\Debug\ServicePattern.csprojResolveAssemblyReference.cache
+C:\Users\yosra\Desktop\yosra\VF\GL4E\DotNet\MapLevio\ServicePattern\obj\Debug\ServicePattern.dll
+C:\Users\yosra\Desktop\yosra\VF\GL4E\DotNet\MapLevio\ServicePattern\obj\Debug\ServicePattern.pdb
+D:\Esprit\4GL4\1er Semestre\Projet\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\ServicePattern.dll.config
+D:\Esprit\4GL4\1er Semestre\Projet\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\ServicePattern.dll
+D:\Esprit\4GL4\1er Semestre\Projet\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\ServicePattern.pdb
+D:\Esprit\4GL4\1er Semestre\Projet\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\Data.dll
+D:\Esprit\4GL4\1er Semestre\Projet\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\EntityFramework.dll
+D:\Esprit\4GL4\1er Semestre\Projet\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\EntityFramework.SqlServer.dll
+D:\Esprit\4GL4\1er Semestre\Projet\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\Domaine.dll
+D:\Esprit\4GL4\1er Semestre\Projet\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\Esprit\4GL4\1er Semestre\Projet\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\MySql.Data.dll
+D:\Esprit\4GL4\1er Semestre\Projet\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\Data.pdb
+D:\Esprit\4GL4\1er Semestre\Projet\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\EntityFramework.xml
+D:\Esprit\4GL4\1er Semestre\Projet\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\EntityFramework.SqlServer.xml
+D:\Esprit\4GL4\1er Semestre\Projet\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\Domaine.pdb
+D:\Esprit\4GL4\1er Semestre\Projet\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\fr\EntityFramework.resources.dll
+D:\Esprit\4GL4\1er Semestre\Projet\VF\GL4E\DotNet\MapLevio\ServicePattern\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+D:\Esprit\4GL4\1er Semestre\Projet\VF\GL4E\DotNet\MapLevio\ServicePattern\obj\Debug\ServicePattern.csprojResolveAssemblyReference.cache
+D:\Esprit\4GL4\1er Semestre\Projet\VF\GL4E\DotNet\MapLevio\ServicePattern\obj\Debug\ServicePattern.dll
+D:\Esprit\4GL4\1er Semestre\Projet\VF\GL4E\DotNet\MapLevio\ServicePattern\obj\Debug\ServicePattern.pdb

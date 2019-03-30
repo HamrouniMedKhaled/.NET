@@ -1,0 +1,20 @@
+JEE:
+	Front:- Contact(envoi de message)
+	Back: -Liste de tous messages
+		-Liste des message non lu
+		-Archiver message
+		-liste des message archiver
+	      -message Classification :w todkhol l liste mta3 wa7da minhom
+	      -Client exigent
+	      -Ressource à probleme
+
+DOTNET: 
+	Front:Client Request(send)
+	Back: List Client Request
+		-Detail
+		-encours se traitement(yitab3ath mail lili ba3th l msg y9olou 
+			votre demande est en cours de traitement) 
+			->return to list
+
+
+		

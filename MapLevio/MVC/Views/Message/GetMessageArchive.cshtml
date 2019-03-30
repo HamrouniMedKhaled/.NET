@@ -1,0 +1,57 @@
+﻿@model IEnumerable<MVC.Models.MessageModel>
+
+@{
+    ViewBag.Title = "GetMessageArchive";
+    Layout = "~/Views/Shared/_LayoutBack.cshtml";
+}
+
+<h3>Archived Messages</h3>
+
+<div class="panel-body no-padding">
+    <table class="table table-striped">
+        <tr>
+            <th>
+                Object
+            </th>
+            <th>
+                Message Cible
+            </th>
+
+            <th>
+                Send date
+            </th>
+
+
+
+
+
+            <th></th>
+        </tr>
+
+        @foreach (var m in ViewBag.result)
+        {
+            <tr>
+
+
+                <td>
+                    @m.messageType
+                </td>
+
+                <td>
+                    @m.messageCible
+                </td>
+
+                <td>
+                    @m.dateEnvoi
+                </td>
+
+
+
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = m.idMessage }) 
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

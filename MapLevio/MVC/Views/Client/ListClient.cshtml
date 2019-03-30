@@ -1,0 +1,95 @@
+﻿@model Domaine.client
+
+@{
+    ViewBag.Title = "ListClient";
+    Layout = "~/Views/Shared/_LayoutBack.cshtml";
+}
+
+<h2>List Client</h2>
+
+<a href="@Url.Action("Create","client")">Add NEW CLIENT</a>
+<div id="table">
+    <table class="table">
+        <tr>
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nom)
+            </th>
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.clientCategory)
+            </th>
+
+
+            <th>
+                @Html.DisplayNameFor(model => model.clientType)
+            </th>
+
+
+
+
+
+            <th> </th>
+        </tr>
+
+        @foreach (var item in ViewBag.result)
+        {
+            <tr>
+
+                <td>
+                    @item.email
+                </td>
+                <td>
+                    @item.password
+                </td>
+                <td>
+                    @item.nom
+                </td>
+                <td>
+                    @item.clientCategory
+                </td>
+
+
+
+                <td>
+                    @item.clientType
+                </td>
+
+
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.userId }) |
+                    @Html.ActionLink("Details", "DetailsClient", new { id = item.userId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.userId })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+
+
+    
+
+@using (Html.BeginForm("Export", "Client", FormMethod.Post))
+            {
+    <input type="hidden" name="tableHtml" />
+    <input type="submit" id="btnSubmit" value="Exporter en pdf" />
+}
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+        $(function () {
+            $("#btnSubmit").click(function () {
+                $("input[name='tableHtml']").val($("#table").html());
+            });
+        });
+</script>

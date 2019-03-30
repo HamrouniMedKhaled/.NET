@@ -1,0 +1,58 @@
+﻿@model IEnumerable<MVC.Models.MessageModel>
+
+@{
+    ViewBag.Title = "MessageArchive";
+    Layout = "~/Views/Shared/_LayoutBack.cshtml";
+}
+
+<h2>MessageArchive</h2>
+
+<div class="panel-body no-padding">
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.body)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dateEnvoi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isArchive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.senderId)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var m in ViewBag.result)
+        {
+            <tr>
+                <td>
+                    @m.body
+                </td>
+                <td>
+                    @m.dateEnvoi
+                </td>
+                <td>
+                    @m.isArchive
+                </td>
+                <td>
+                    @m.lu
+                </td>
+                <td>
+                    @m.senderId
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = m.idMessage }) |
+                    @Html.ActionLink("Details", "Details", new { id = m.idMessage }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = m.idMessage })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

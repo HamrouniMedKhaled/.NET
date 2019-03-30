@@ -1,0 +1,77 @@
+﻿@model MVC.Models.DemandeModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutBack.cshtml";
+}
+
+
+
+
+    
+   
+        <fieldset>
+            <legend>Resource criteria</legend>
+            <div>
+                experience (years) :@Html.DisplayFor(model => model.anneeExp)
+            </div>
+            </br>
+            <div>
+                Baccalauriat : @Html.DisplayFor(model => model.bac)
+            </div>
+            </br>
+
+            <div>
+                Competence :@Html.DisplayFor(model => model.competance)
+            </div>
+            </br>
+          
+            <div>
+                Diplome :@Html.DisplayFor(model => model.diplome)
+            </div>
+            </br> </br>
+           
+        </fieldset>
+        <fieldset>
+            <legend>Project details</legend>
+
+            <div>
+                Director :@Html.DisplayFor(model => model.directeur)
+
+
+            </div>
+            </br>
+            <div>
+                Name :@Html.DisplayFor(model => model.nomProjet)
+            </div>
+
+            </br>
+            <div>
+               Cost :@Html.DisplayFor(model => model.cout)
+            </div>
+
+            </br>
+
+            <div>
+                Description     :@Html.DisplayFor(model => model.description)
+
+
+            </div>
+
+            </br>
+
+            <div>
+                Duration : @Html.DisplayFor(model => model.duree)
+            </div>
+
+            </br>
+
+</fieldset>
+
+<hr />
+    
+
+<p>
+    @Html.ActionLink("En cous de traitement", "envoiMail") |
+    @Html.ActionLink("Back to List", "ListeDemandes")
+</p>

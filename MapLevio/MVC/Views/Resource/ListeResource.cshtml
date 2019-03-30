@@ -1,0 +1,85 @@
+﻿@model IEnumerable<MVC.Models.ResourceViewModels>
+@{
+    ViewBag.Title = "CandidateFr";
+    Layout = "~/Views/Shared/_LayoutBack.cshtml";
+}
+<h2>ListResource</h2>
+
+<div class="container">
+    <div class="form-group">
+       <div class="input-group">
+
+           <span class="input-group-addon"><i class="glyphicon glyphicon-search" ></i></span>
+           <input type="text" id="Search" placeholder="Search"  class = "form-control1 ng-invalid ng-invalid-required ng-touched"/>
+       </div> 
+    
+    
+    
+    </div>
+
+
+    </div>
+
+<div class="panel-body no-padding">
+    <table class="table table-striped">
+        <tr>
+            <th>Image</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Mail</th>
+            <th>DateNaissance</th>
+            <th>Address</th>
+            <th>Skill</th>
+            <th>Resource State</th>
+            <th>Resource Type</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        @foreach (var r in ViewBag.result)
+        {
+
+            <tr class="Search">
+                <td>
+                    <img src="@Url.Content("~/Content/Upload/"+r.image)" alt="image" class="img-circle" width="100" height="70" />
+                </td>
+                <td>@r.nom</td>
+                <td>@r.prenom</td>
+                <td>@r.email</td>
+                <td>@r.dateNaissance</td>
+                <td>@r.adresse.rue @r.adresse.ville @r.adresse.pays @r.adresse.codePostal</td>
+                <td>@r.competance</td>
+                <td>@r.resourceState</td>
+                <td>@r.resourceType</td>
+               
+                <td>@Html.ActionLink("Edit", "Edit", new { id = r.userId })</td>
+                <td>@Html.ActionLink("Delete", "Delete", new { id = r.userId })</td>
+            </tr>
+
+        }
+
+    </table>
+    </div>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+        function Contains(text_one, text_two) {
+            if (text_one.indexOf(text_two) != -1)
+                return true;
+        }
+        $("#Search").keyup(function () {
+            var searchText = $("#Search").val().toLowerCase();
+            $(".Search").each(function () {
+                if (!Contains($(this).text().toLowerCase(), searchText)) {
+                    $(this).hide();
+                }
+                else {
+                    $(this).show();
+                }
+            });
+        });
+    });
+
+
+
+</script>

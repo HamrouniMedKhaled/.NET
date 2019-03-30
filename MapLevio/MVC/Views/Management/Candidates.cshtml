@@ -1,0 +1,242 @@
+﻿
+@{
+    ViewBag.Title = "Candidates";
+    Layout = "~/Views/Shared/_LayoutBack.cshtml";
+}
+<script src="~/Scripts/Chart/exporting.js"></script>
+<script src="~/Scripts/Chart/highcharts.js"></script>
+<h2>Candidates</h2>
+
+@Html.ActionLink("Projects", "Projects");
+
+
+<div id="container-candidates" style="min-width: 200px; height: 300px; max-width: 400px; margin: 0 auto"></div>
+<h2>Nombre de tous les candidats = @ViewBag.all</h2>
+<h2>Candidates Entrevue</h2>
+<div class="panel-body no-padding">
+    <table class="table table-striped">
+        <thead>
+            <tr class="warning">
+                <th>
+                    email
+                </th>
+                <th>
+                    Role
+                </th>
+                <th>
+                    State
+                </th>
+                <th>
+                    Action
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var p in ViewBag.entrevue)
+            {
+                <tr>
+                    <td>
+                        @p.email
+                    </td>
+                    <td>
+                        @p.role
+                    </td>
+                    <td>
+                        @p.etat
+                    </td>
+
+                    <td>
+                        <button type="button" class="btn btn_5 btn-lg btn-default">@Html.ActionLink("Details", "DetailsCandidate","Candidate", new { id = p.userId }) </button>
+                </tr>
+            }
+        </tbody>
+
+
+
+        <h2>Candidats Entretien</h2>
+        <div class="panel-body no-padding">
+            <table class="table table-striped">
+                <thead>
+                    <tr class="warning">
+                        <th>
+                            email
+                        </th>
+                        <th>
+                            Role
+                        </th>
+                        <th>
+                            State
+                        </th>
+                        <th>
+                            Action
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var p in ViewBag.entretien)
+                    {
+                        <tr>
+                            <td>
+                                @p.email
+                            </td>
+                            <td>
+                                @p.role
+                            </td>
+                            <td>
+                                @p.etat
+                            </td>
+
+                            <td>
+                                <button type="button" class="btn btn_5 btn-lg btn-default">@Html.ActionLink("Details", "DetailsCandidate", "Candidate", new { id = p.userId },null) </button>
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+
+
+                <h2>Candidats Francais</h2>
+                <div class="panel-body no-padding">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr class="warning">
+                                <th>
+                                    email
+                                </th>
+                                <th>
+                                    Role
+                                </th>
+                                <th>
+                                    State
+                                </th>
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var p in ViewBag.fr)
+                            {
+                                <tr>
+                                    <td>
+                                        @p.email
+                                    </td>
+                                    <td>
+                                        @p.role
+                                    </td>
+                                    <td>
+                                        @p.etat
+                                    </td>
+
+                                    <td>
+                                        <button type="button" class="btn btn_5 btn-lg btn-default">@Html.ActionLink("Details", "DetailsCandidate", "Candidate", new { id = p.userId }, null) </button>
+
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+
+                        <h2>Candidats Accepté</h2>
+                        <div class="panel-body no-padding">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr class="warning">
+                                        <th>
+                                            email
+                                        </th>
+                                        <th>
+                                            Role
+                                        </th>
+                                        <th>
+                                            State
+                                        </th>
+                                        <th>
+                                            Action
+                                        </th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach (var p in ViewBag.accepted)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @p.email
+                                            </td>
+                                            <td>
+                                                @p.role
+                                            </td>
+                                            <td>
+                                                @p.etat
+                                            </td>
+
+                                            <td>
+                                                <button type="button" class="btn btn_5 btn-lg btn-default">@Html.ActionLink("Details", "DetailsCandidate", "Candidate", new { id = p.userId }, null) </button>
+
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+
+
+
+
+                                <script>
+Highcharts.chart('container-candidates', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie',
+
+        },
+        credits: { enabled: false },
+        title: {
+            text: 'Candidates Ratio'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'blue'
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'Candidate Type',
+            colorByPoint: true,
+            data: [{
+                name: 'Tech Test',
+                y: @ViewBag.nentretien
+                }, {
+                    name: 'Interview',
+                    y: @ViewBag.nentrevue
+                    },
+            {
+                name: 'French Test',
+                y: @ViewBag.nfr
+                },
+            {
+                name: 'Accepted',
+                y: @ViewBag.naccepted
+                }]
+                }]
+    });
+
+
+                                </script>

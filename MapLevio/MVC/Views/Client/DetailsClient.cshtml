@@ -1,0 +1,78 @@
+﻿@model Domaine.client
+
+@{
+    ViewBag.Title = "DetailsClient";
+    Layout = "~/Views/Shared/_LayoutBack.cshtml";
+}
+
+<h2>DetailsClient</h2>
+
+<div>
+    <h4>client</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        
+
+      
+
+
+       
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+      
+        <dt>
+            @Html.DisplayNameFor(model => model.nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prenom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prenom)
+        </dd>
+
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clientCategory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clientCategory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clientType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clientType)
+        </dd>
+
+        
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.userId }) |
+    @Html.ActionLink("Back to List", "ListClient")
+</p>

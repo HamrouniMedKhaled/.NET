@@ -1,0 +1,44 @@
+﻿@model Domaine.candidate
+
+@{
+    ViewBag.Title = "DetailsCandidate";
+    Layout = "~/Views/Shared/_LayoutBack.cshtml";
+}
+
+<h2>DetailsCandidate</h2>
+
+<div class="col-md-6 widget_1_box2">
+    <div class="wid_blog">
+        <h1>@Html.DisplayFor(model => model.nom) @Html.DisplayFor(model => model.prenom)</h1>
+    </div>
+    <div class="wid_blog-desc">
+        <div class="wid_blog-left">
+            @{ string path = "~/Content/Upload/" + Model.image ; }
+            <img src="@Url.Content(path)" width="100" height="100">
+        </div>
+        <div class="wid_blog-right">
+            <h2>Email : @Html.DisplayFor(model => model.email)</h2>
+            <p>
+                Etat :@Html.DisplayFor(model => model.etat)
+            </p>
+            <ul class="list-unstyled list-inline">
+                <li><a href="#" class="text-muted">Date de Naissance : @Html.DisplayFor(model => model.dateNaissance)</a></li></br>
+                <li><a href="#" class="text-muted"><i class="fa fa-comment"></i> Adresse : @Html.DisplayFor(model => model.pays)</a></li>
+                <li><a href="#" class="text-orange"><i class="fa fa-heart"></i> 12k</a></li>
+                <li><a href="#" class="text-muted">More</a></li>
+            </ul>
+           <div class="wid_blog-left">
+            @{ string pathc = "~/Content/UploadCv/" + Model.cv ; }
+            <a href="@Url.Content(pathc)" >Leurs Cv </a>
+        </div>
+    </div>
+    <div class="clearfix"> </div>
+</div>
+    @if (Model.etat.Equals("Attente_entrevu"))
+    {
+        <button type="button" class="btn btn_5 btn-lg btn-primary">@Html.ActionLink("Accepter", "approuverCandidate", new { id = Model.userId })</button>
+        <button type="button" class="btn btn_5 btn-lg btn-danger">  @Html.ActionLink("Refuser", "refuserCandidate", new { id = Model.userId })</button>
+
+    }
+</div>
+</div>

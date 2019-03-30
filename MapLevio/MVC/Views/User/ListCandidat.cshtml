@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "BackUsers";
+    Layout = "~/Views/Shared/_LayoutBack.cshtml";
+}
+
+
+
+
+
+<h2>List des candidats</h2>
+<table cellpadding="2" cellspacing="2" border="1">
+    <tr>
+        <th>User Id</th>
+
+        <th>nom</th>
+        <th>prenom</th>
+        <th>Email</th>
+       
+        <th>Role</th>
+        <th>Delete</th>
+
+
+
+    </tr>
+    @foreach (var p in ViewBag.result)
+    {
+        <tr>
+            <td>@p.userId</td>
+
+            <td>@p.nom</td>
+            <td>@p.prenom</td>
+            <td>@p.email</td>
+           
+            <td>@p.role</td>
+            <td>@Html.ActionLink("Delete", "DeleteCandidate", "User", new { id = @p.userId }, new { @class = "fas fa-ey" })
+               </td>
+         
+        </tr>
+    }
+
+
+    
+
+
+</table>
+

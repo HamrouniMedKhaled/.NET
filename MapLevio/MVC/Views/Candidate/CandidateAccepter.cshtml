@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "CandidateAccepter";
+    Layout = "~/Views/Shared/_LayoutBack.cshtml";
+}
+
+<h2>CandidateAccepter</h2>
+
+
+
+<div class="panel-body no-padding">
+    <table class="table table-striped">
+        <thead>
+            <tr class="warning">
+                <th>
+                    email
+                </th>
+                <th>
+                    Role
+                </th>
+                <th>
+                    Etat
+                </th>
+                <th>
+                    Action
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var p in ViewBag.result)
+            {
+                <tr>
+                    <td>
+                        @p.email
+                    </td>
+                    <td>
+                        @p.role
+                    </td>
+                    <td>
+                        @p.etat
+                    </td>
+
+                    <td>
+                        <button type="button" class="btn btn_5 btn-lg btn-default">@Html.ActionLink("Details", "DetailsCandidate", new { id = p.userId }) </button>
+
+                        
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
